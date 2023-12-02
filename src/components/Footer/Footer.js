@@ -4,6 +4,7 @@ import styled from 'styled-components/macro';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 
 import VisuallyHidden from '../VisuallyHidden';
+import { QUERIES } from '../../constants';
 
 const Footer = () => {
   return (
@@ -170,6 +171,13 @@ const MainNavArea = styled.div`
   gap: 32px;
   padding: 32px 0 48px;
   text-align: center;
+
+  @media(${QUERIES.tabletAndUp}) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-between;
+    text-align: revert;
+  }
 `;
 
 const MainNavHeading = styled.h2`
